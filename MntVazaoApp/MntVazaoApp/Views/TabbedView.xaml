@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MntVazaoApp.Droid.Views.TabbedView"
+            xmlns:views="clr-namespace:MntVazaoApp.Droid.Views"
+            BarTextColor="White"
+            BarBackgroundColor="#2196f3"
+            Title="Home"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.BarItemColor="White"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BackgroundColor="White">
+
+    <TabbedPage.Children BarBackgroundColor="#2196f3">
+        <NavigationPage Title="Página inicial" IconImageSource="icon_home_black_24dp">
+            <x:Arguments>
+                <views:HomeView/>
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Dados" IconImageSource="icon_show_chart_black_24dp">
+            <x:Arguments>
+                <views:DadosView/>
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Mapa" IconImageSource="icon_map_black_24dp">
+            <x:Arguments>
+                <views:MapaView/>
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MntVazaoApp.App">
+    <Application.Resources>
+
+        <!--HomeView.xaml-->
+        <Style x:Key="SensorIdLabel" TargetType="Label">
+            <Setter Property="Margin" Value="10,10,10,0" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#2197f9"></Setter>
+        </Style>
+        
+        <Style x:Key="SensorIdEntry" TargetType="Entry">
+            <Setter Property="Margin" Value="10,0" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="#2197f9" />
+            <Setter Property="PlaceholderColor" Value="#2197f9" />
+        </Style>
+
+        <Style x:Key="BuscarSensorIdButton" TargetType="Button">
+            <Setter Property="Margin" Value="10,10,10,0" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="TextColor" Value="white" />
+            <Setter Property="BackgroundColor" Value="#2197f9" />
+            <Setter Property="CornerRadius" Value="100" />
+        </Style>
+
+        <Style x:Key="CampoSensorLabel" TargetType="Label">
+            <Setter Property="Margin" Value="10,10,-10,0" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#2197f9" />
+        </Style>
+
+        <Style x:Key="ValorSensorLabel" TargetType="Label">
+            <Setter Property="Margin" Value="10,10,-10,0" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="TextColor" Value="#2197f9" />
+        </Style>
+
+        <Style x:Key="ParaMaisInformacoesLabel" TargetType="Label">
+            <Setter Property="Margin" Value="10,50,10,0" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#2197f9" />
+        </Style>
+
+        <Style x:Key="UrlLabel" TargetType="Label">
+            <Setter Property="Margin" Value="10,10,10,0" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="FontAttributes" Value="None" />
+            <Setter Property="TextColor" Value="#2197f9" />
+        </Style>
+
+        <Style x:Key="AbriNoBrowserButton" TargetType="Button">
+            <Setter Property="Margin" Value="10,10,10,0" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#2197f9" />
+            <Setter Property="CornerRadius" Value="100" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+        
+        <!--DadosView.xaml-->
+        <Style x:Key="TituloDadosLabel" TargetType="Label">
+            <Setter Property="Padding" Value="0,5,0,25" />
+            <Setter Property="TextColor" Value="#2196f3" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="GraficoFrame" TargetType="Frame">
+            <Setter Property="Padding" Value="2,15,2,15" />
+            <Setter Property="BackgroundColor" Value="#White" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BorderColor" Value="#2196f3" />
+        </Style>
+
+        <Style x:Key="MediaFrame" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BorderColor" Value="#2196f3" />
+        </Style>
+
+        <Style x:Key="MediaStackLayout" TargetType="StackLayout">
+            <Setter Property="Padding" Value="0,0,0,20" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Orientation" Value="Horizontal" />
+        </Style>
+
+        <Style x:Key="MediaChaveLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="#2196f3" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <Style x:Key="MediaValorLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="#2196f3" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+        <Style x:Key="SwitchCellStackLayout" TargetType="StackLayout">
+            <Setter Property="Padding" Value="-52,-13,0,0" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Orientation" Value="Horizontal" />
+        </Style>
+
+        <Style x:Key="BuscarButton" TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#2196f3" />
+            <Setter Property="CornerRadius" Value="100" />
+        </Style>
+
+        <!--MapaView.xaml-->
+        <Style x:Key="MapaStackLayout" TargetType="StackLayout">
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <Style x:Key="DescMapaStackLayout" TargetType="StackLayout">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+        </Style>
+
+        <Style x:Key="TituloDescMapaLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="#2196f6"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextDecorations" Value="Underline"/>
+        </Style>
+
+        <Style x:Key="ChaveValorMapaLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="#2196f6"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

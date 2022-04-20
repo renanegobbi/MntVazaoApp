@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MntVazaoApp.Droid.Views.HomeView" Title="MntVazao">
+
+    <StackLayout BackgroundColor="white" Padding="0,1,0,10">
+        <ActivityIndicator IsRunning="{Binding Aguarde}"
+                           IsVisible="{Binding Aguarde}"
+                           Color="#2196f3"></ActivityIndicator>
+        <Label  
+            Text="Insira o id do Sensor:" 
+            Style="{StaticResource SensorIdLabel}"
+        />
+        
+        <Entry 
+            Placeholder="Id do sensor" 
+            Keyboard="Numeric" Text="{Binding IdSensor}"
+            Style="{StaticResource SensorIdEntry}"
+            />
+        
+        <Button 
+            Text="Buscar" 
+            Command ="{Binding BuscarSensorCommand}"
+            Style="{StaticResource BuscarSensorIdButton}"
+        />
+
+        <ScrollView Orientation="Both">
+            <StackLayout BindableLayout.ItemsSource="{Binding Sensor}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="10">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Sensor_ID =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_ID}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Descricao =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_Descricao}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Ativo =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_Ativo}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Modelo =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_Modelo}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Pressão Nominal =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_PressaoNominal}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Pressão Unidade =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_PressaoUnidade}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Vazão Mínima =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_VazaoMin}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Vazão Máxima =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_VazaoMax}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Vazão Unidade =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_VazaoUnidade}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Código UPC =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_CodigoUPC}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Fabricante =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_Fabricante}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Fabricante Part. Number =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_FabricantePartNumber}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Data Inic. Op. =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_DataInicOp}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Data Fim Op. =" Style="{StaticResource CampoSensorLabel}"></Label>
+                                    <Label Text="{Binding Sensor_DataFimOp}" Style="{StaticResource ValorSensorLabel}"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+ 
+</ContentPage>

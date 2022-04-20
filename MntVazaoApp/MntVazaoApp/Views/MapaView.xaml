@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MntVazaoApp.Droid.Views.MapaView" Title="Mapa" BackgroundColor="White"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps">
+  
+    <ContentPage.Content>
+        <Grid  BackgroundColor="White" Padding="0,1,0,1" RowSpacing="0">
+            <ActivityIndicator IsRunning="{Binding Aguarde}"
+                           IsVisible="{Binding Aguarde}"
+                           Color="#2196f3"></ActivityIndicator>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="205" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Background="#2196f3">
+                <maps:Map Grid.Row="0" x:Name="map" Style="{StaticResource MapaStackLayout}"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Style="{StaticResource DescMapaStackLayout}">
+                <Label Text="Organização" Style="{StaticResource TituloDescMapaLabel}"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nome: " Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                    <Label Text="{Binding OrganizacaoNome}" Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Telefone: " Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                    <Label Text="{Binding OrganizacaoTelefone}" Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="E-mail: " Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                    <Label Text="{Binding OrganizacaoEmail}" Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                </StackLayout>
+                <Label Text="Localização" Style="{StaticResource TituloDescMapaLabel}"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Descrição: " Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                    <Label Text="{Binding LocalizacaoDescricao}" Style="{StaticResource ChaveValorMapaLabel}"></Label>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
